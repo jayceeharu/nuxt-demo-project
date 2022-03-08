@@ -14,7 +14,9 @@
       <div class="col-md-8">
         <!-- REAL ESTATE TITLE -->
         <div class="row-between">
-          <h1 class="real-estate-name">HOTEL GLOBAL VIEW Hachinohe 102</h1>
+          <h1 class="real-estate-name">
+            {{ realEstateSection.hotelName }}
+          </h1>
         </div>
         <hr />
         <!-- END REAL ESTATE TITLE -->
@@ -26,7 +28,7 @@
           </div>
           <div class="access-details">
             <div class="access-address">
-              <p>7 Jusannichimachi, Hachinohe City, Aomori Prefecture</p>
+              <p>{{ realEstateSection.hotelAddress }}</p>
               <p class="address-link">
                 <a
                   href="https://www.google.co.jp/maps/place/青森県八戸市大字十三日町7"
@@ -45,6 +47,7 @@
         </div>
         <!-- END OF ACCESS -->
 
+        <!-- RENT -->
         <div class="header-title">
           <div><h4>Rent, initial costs, etc.</h4></div>
         </div>
@@ -52,50 +55,49 @@
         <div class="container-div-father">
           <div class="container-div inline-container">
             <span>RENT</span>
-            <span class="price-type"
-              >Monthly fee 14.59 million yen including tax</span
-            >
+            <span class="price-type">{{ realEstateSection.rentCost }}</span>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>Management fee / common service fee, etc. </span>
-              <span>――――/ none</span>
+              <span>{{ realEstateSection.rentManagementFee }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span>Right money / key money</span>
-              <span>――――/ none</span>
+              <span>{{ realEstateSection.rentMoney }}</span>
             </div>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>Security deposit / security deposit</span>
-              <span>-/ 3.00 months</span>
+              <span>{{ realEstateSection.securityDeposit }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span>Depreciation / depreciation</span>
-              <span>none / -</span>
+              <span>{{ realEstateSection.depreciation }}</span>
             </div>
           </div>
         </div>
+        <!--END OF RENT -->
 
+        <!--PROPERTY INFORMATION -->
         <div class="header-title">
           <div><h4>Property information</h4></div>
         </div>
-
         <div class="container-div-father">
           <div class="container-div">
             <div class="container-div inline-container">
               <span>Property No</span>
-              <span>00000000000192810003</span>
+              <span>{{ realEstateSection.propertyNo }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span>Property type</span>
-              <span>Rental stores (partial)</span>
+              <span>{{ realEstateSection.propertyType }}</span>
             </div>
           </div>
 
@@ -103,76 +105,107 @@
             <div class="container-div inline-container">
               <span>Building structure</span>
               <span>
-                Steel-framed reinforced concrete structure (SRC structure) / 9
-                floors above ground and 2 floors below ground
+                {{ realEstateSection.propertyBldgStructure }}
               </span>
             </div>
 
             <div class="container-div inline-container">
               <span>Floor / room number</span>
-              <span> Room 102 on the 1st floor</span>
+              <span> {{ realEstateSection.propertyFlrNo }}</span>
             </div>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>area</span>
-              <span> 48.71㎡</span>
+              <span>{{ realEstateSection.propertyArea }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span>Number of tsubo</span>
-              <span> 14.73 tsubo</span>
+              <span> {{ realEstateSection.propertyTsubo }}</span>
             </div>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>Construction date</span>
-              <span> November 1980</span>
+              <span> {{ realEstateSection.propertyConstDate }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span>parking</span>
-              <span> Nothing</span>
+              <span> {{ realEstateSection.propertyParking }}</span>
             </div>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>type of contract</span>
-              <span> Ordinary rented house</span>
+              <span> {{ realEstateSection.propertyContract }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span> Contract period</span>
-              <span>2 years</span>
+              <span>{{ realEstateSection.propertyContractPeriod }}</span>
             </div>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>Current situation</span>
-              <span>Sky</span>
+              <span>{{ realEstateSection.propertyCurrent }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span> delivery</span>
-              <span> ――――</span>
+              <span> {{ realEstateSection.propertyDelivery }}</span>
             </div>
           </div>
 
           <div class="container-div">
             <div class="container-div inline-container">
               <span>Renewal fee</span>
-              <span> none</span>
+              <span> {{ realEstateSection.propertyRenewalFee }}</span>
             </div>
 
             <div class="container-div inline-container">
               <span> Feature transfer fee</span>
-              <span> ――――</span>
+              <span> {{ realEstateSection.propertyTransFee }}</span>
             </div>
           </div>
+        </div>
+        <!--END PROPERTY INFORMATION -->
+
+        <div class="header-title">
+          <div><h4>Applicable industry</h4></div>
+          <GrayCard
+            v-for="card in realEstateSection.applicableIndustry"
+            :key="card.id"
+            :card="card"
+          />
+        </div>
+
+        <div class="header-title">
+          <div><h4>Features</h4></div>
+           <GrayCard
+            v-for="card in realEstateSection.applicableIndustry"
+            :key="card.id"
+            :card="card"
+          />
+        </div>
+
+        <div class="header-title">
+          <div><h4>Location</h4></div>
+           <GrayCard
+            v-for="card in realEstateSection.applicableIndustry"
+            :key="card.id"
+            :card="card"
+          />
+        </div>
+
+        <div class="header-title">
+          <div><h4>Remarks</h4></div>
         </div>
       </div>
     </div>
@@ -180,7 +213,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["realEstateSection"],
+};
 </script>
 
 <style scoped>

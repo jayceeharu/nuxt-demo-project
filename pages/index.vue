@@ -1,10 +1,21 @@
 <template>
   <div class=".container-fluid">
     <Header />
-    <RealEstate />
+    <RealEstate
+      v-for="hotelInfo in realEstateInfo"
+      :key="hotelInfo.id"
+      :realEstateSection="hotelInfo"
+    />
   </div>
 </template>
 
 <script>
-export default {};
+import { realEstateData } from "@/assets/data.js";
+export default {
+  data() {
+    return {
+      realEstateInfo: realEstateData,
+    };
+  },
+};
 </script>
