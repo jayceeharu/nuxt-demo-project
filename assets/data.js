@@ -29,38 +29,46 @@ export const realEstateData = [
     applicableIndustry: [
       {
         id: 19,
-        itemText: "Heavy eating and drinking"
+        itemText: "Heavy eating and drinking",
       },
       {
         id: 20,
-        itemText: "Light food and drink"
+        itemText: "Light food and drink",
       },
       {
         id: 21,
-        itemText: "Product sales"
+        itemText: "Product sales",
       },
       {
         id: 22,
-        itemText: "Cosmetology / Salon"
+        itemText: "Cosmetology / Salon",
       },
       {
         id: 23,
-        itemText: "Clinic / long-term care"
+        itemText: "Clinic / long-term care",
       },
-      {
-        id: 24,
-        itemText: "ASDASD"
-      },
+    
     ],
 
     features: [
+      {
+        id: 25,
+        itemText: "Available 24 hours",
+      },
+      {
+        id: 26,
+        itemText: "Lorem Ipsum",
+      },
 
+      
     ],
 
     location: [
-
+      {
+        id: 27,
+        itemText: "Roadside store (1st floor)",
+      },
     ],
-
 
     remarks:
       "Property number 19281003 (Responsible: Sendai branch office Sakaguchi) 2019/10/1 Renamed to HOTEL GLOBAL VIEW Hachinohe (former name Hachinohe Washington Hotel)・ Fire insurance required・ You may be asked to use a rent debt guarantee company.・ Individual air conditioning",

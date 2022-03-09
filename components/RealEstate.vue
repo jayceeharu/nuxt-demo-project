@@ -179,33 +179,40 @@
 
         <div class="header-title">
           <div><h4>Applicable industry</h4></div>
-          <GrayCard
-            v-for="card in realEstateSection.applicableIndustry"
-            :key="card.id"
-            :card="card"
-          />
+          <div class="applicable-industry-container">
+            <GrayCard
+              v-for="card in realEstateSection.applicableIndustry"
+              :key="card.id"
+              :card="card"
+            />
+          </div>
         </div>
 
         <div class="header-title">
           <div><h4>Features</h4></div>
-           <GrayCard
-            v-for="card in realEstateSection.applicableIndustry"
-            :key="card.id"
-            :card="card"
-          />
+          <div class="applicable-industry-container">
+            <GrayCard
+              v-for="card in realEstateSection.features"
+              :key="card.id"
+              :card="card"
+            />
+          </div>
         </div>
 
         <div class="header-title">
           <div><h4>Location</h4></div>
-           <GrayCard
-            v-for="card in realEstateSection.applicableIndustry"
-            :key="card.id"
-            :card="card"
-          />
+          <div class="applicable-industry-container">
+            <GrayCard
+              v-for="card in realEstateSection.location"
+              :key="card.id"
+              :card="card"
+            />
+          </div>
         </div>
 
         <div class="header-title">
           <div><h4>Remarks</h4></div>
+          <p>{{ realEstateSection.remarks }}</p>
         </div>
       </div>
     </div>
@@ -287,5 +294,9 @@ export default {
   align-items: center;
   font-size: 14px;
   height: 100%;
+}
+.applicable-industry-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

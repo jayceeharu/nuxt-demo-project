@@ -4,11 +4,12 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
     
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary">Search by area</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Search by route</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Search from the map</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">
+Search by vacant property</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Find a real estate company</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

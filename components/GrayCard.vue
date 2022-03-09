@@ -1,6 +1,8 @@
 <template>
-  <div class="gray-card">
-    <p>{{ card.itemText }}</p>
+  <div class="container-card">
+    <div class="row">
+      <div class="col"><p>{{ card.itemText }}</p></div>
+    </div>
   </div>
 </template>
 
@@ -11,24 +13,18 @@ export default {
 </script>
 
 <style scoped>
-.gray-card {
-  height: 26px;
+.row {
+  height: 30px;
   background-color: #ebebeb;
   color: #444444;
   font-size: 14px;
   text-align: center;
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin: 5px;
+  vertical-align: inherit;
   padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
 </style>
+
